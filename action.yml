@@ -1,0 +1,17 @@
+name: valores
+description: imprimir valores
+inputs:
+  nombre:
+    description: 'Nombre'
+    required: true
+  apellido:
+    description: 'Apellido'
+    required: true
+  edad:
+    description: 'Edad'
+    required: true
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+
+
