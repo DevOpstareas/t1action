@@ -27564,7 +27564,7 @@ try {
 
   const MayorEdad = edad - 18;
 
-  console.log(`${nombre} ${apellido} cumplio la mayoria de edad hace ${edad} años y le faltan ${MayorEdad} años para cumplir 100 años`);
+  console.log(`${nombre} ${apellido} cumplio la mayoria de edad hace ${MayorEdad} años y le faltan ${MayorEdad} años para cumplir 100 años`);
 } catch (error) {
   core.setFailed(error.message);
 }
