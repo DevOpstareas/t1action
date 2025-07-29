@@ -5,10 +5,14 @@ try {
   const apellido = core.getInput('apellido');
   const edad = parseInt(core.getInput('edad'), 10);
 
-  const mayorEdad = Math.max(0, edad - 18);
-  const tiempo = 100 - edad;
-
-  console.log(`${nombre} ${apellido} cumplio la mayoria de edad hace ${mayorEdad} años y le faltan ${tiempo} años para cumplir 100 años`);
+  let mayorEdad;
+  if (edad < 18) {
+    mayorEdad = 18 - edad;
+    console.log(`${nombre} ${apellido} cumplirá la mayoría de edad en ${mayorEdad} años y le faltan ${Math.max(0, 100 - edad)} años para cumplir 100 años`);
+  } else {
+    mayorEdad = edad - 18;
+    console.log(`${nombre} ${apellido} cumplió la mayoría de edad hace ${mayorEdad} años y le faltan ${Math.max(0, 100 - edad)} años para cumplir 100 años`);
+  }
 } catch (error) {
   core.setFailed(error.message);
 }
