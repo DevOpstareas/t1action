@@ -12,9 +12,8 @@ try {
   } else {
     mayorEdad = edad - 18;
     console.log(`${nombre} ${apellido} cumplió la mayoría de edad hace ${mayorEdad} años y le faltan ${Math.max(0, 100 - edad)} años para cumplir 100 años`);
-
-    core.setOutput('multiplicacion', edad * 100);
   }
+  core.setOutput('multiplicacion', edad * 100);
 } catch (error) {
   core.setFailed(error.message);
 }
