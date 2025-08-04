@@ -10,9 +10,10 @@ inputs:
   edad:
     description: 'Edad'
     required: true
+outputs:
   multiplicacion:
     description: 'Multiplicacion edad'
-    required: false    
+    required: false
 runs:
   using: 'node20'
   main: 'dist/index.js'
